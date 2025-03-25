@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+IT+Moderna:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tektur:wght@400..900&display=swap');
+
+body,button{
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #ffffff;
+  }
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,0.3169642857142857) 0%, rgba(5,5,5,1) 50%, rgba(1,162,195,0.4458158263305322) 88%, rgba(0,212,255,1) 100%);
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+button{
+    height: 9.3rem;
+    width: 9.3rem;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    background-color: #73A5C6;
+}
+.buttons{
+    display: grid;
+    background-color: #000;
+    grid-template-columns: 9.6rem 9.6rem 9.6rem;
+    grid-template-rows: 9.6rem 9.6rem 9.6rem;
+    border-radius: 10px;
+}
+.startbuttoncontainer{
+    height: 3.2rem;
+    width: 10.2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.startbutton{
+    font-size: 1.5rem;
+    background-color: #00ff1e;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 1rem;
+}
+.title{
+    font-size: 4rem;
+}
+.currstatus{
+    color: #ffffff;
+}
