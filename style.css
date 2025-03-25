@@ -59,3 +59,44 @@ button{
 .currstatus{
     color: #ffffff;
 }
+
+@media(max-width:530px){
+.title{
+    font-size: 3rem;
+}
+}
+@media(max-width:478px){
+     .title{
+        font-size: 2rem;
+     }
+     .startbutton{
+        font-size: 1rem;
+        background-color: #00ff1e;
+        height: 2rem;
+        width: 7rem;
+        border-radius: 0.7rem;
+    }
+    .startbuttoncontainer{
+        height: 2.1rem;
+        width: 7.1rem;
+        background-color: #ffffff;
+        border-radius: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    button{
+        height: 5.3rem;
+        width: 5.3rem;
+        border-radius: 7px;
+        border: 1.5px solid #ffffff;
+        background-color: #73A5C6;
+    }
+    .buttons{
+        display: grid;
+        background-color: #000;
+        grid-template-columns: 5.5rem 5.5rem 5.5rem;
+        grid-template-rows: 5.5rem 5.5rem 5.5rem;
+        border-radius: 10px;
+    }
+}
