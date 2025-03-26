@@ -20,18 +20,120 @@ let game = false;
 startButton.addEventListener("click", () => {
   start();
   if (game === true) {
-    randomNumber =(Math.random() * 8 + 1).toFixed(0);
+    randomNumber =  (Math.random() * 8 + 1).toFixed(0);
     patterns.push(randomNumber);
-    for (let i = 0; i < patterns.length; i++) {
-      const element = patterns[i];
+    if (randomNumber==1) {
+      button1.style.backgroundColor="#FFFFFF"
+      setTimeout(()=>{
+        button1.style.backgroundColor="#73A5C6"
+      },500)
+    }
+    if (randomNumber==2) {
+      setTimeout(()=>{
+        button2.style.backgroundColor="#73A5C6"
+      },500)
+      button2.style.backgroundColor="#FFFFFF"
+    }
+    if (randomNumber==3) {
+      setTimeout(()=>{
+        button3.style.backgroundColor="#73A5C6"
+      },500)
+      button3.style.backgroundColor="#FFFFFF"
+    }
+    if (randomNumber==4) {
+      setTimeout(()=>{
+        button4.style.backgroundColor="#73A5C6"
+      },500)
+      button4.style.backgroundColor="#FFFFFF"
+    }
+    if (randomNumber==5) {
+      setTimeout(()=>{
+        button5.style.backgroundColor="#73A5C6"
+      },500)
+      button5.style.backgroundColor="#FFFFFF"
+    }
+    if (randomNumber==6) {
+      setTimeout(()=>{
+        button6.style.backgroundColor="#73A5C6"
+      },500)
+      button6.style.backgroundColor="#FFFFFF"
+    }
+    if (randomNumber==7) {
+      setTimeout(()=>{
+        button7.style.backgroundColor="#73A5C6"
+      },500)
+      button7.style.backgroundColor="#FFFFFF"
+    }
+    if (randomNumber==8) {
+      setTimeout(()=>{
+        button8.style.backgroundColor="#73A5C6"
+      },500)
+      button8.style.backgroundColor="#FFFFFF"
+    }
+    if (randomNumber==9) {
+      setTimeout(()=>{
+        button9.style.backgroundColor="#73A5C6"
+      },500)
+      button9.style.backgroundColor="#FFFFFF"
     }
     buttons.forEach((button)=>{
-      if (randomNumber==1) {
-        button1.style.backgroundColor="#ffffff"
-      }
       button.addEventListener("click",()=>{
         randomNumber =(Math.random() * 8 + 1).toFixed(0);
         patterns.push(randomNumber);
+        if (randomNumber==1) {
+          button1.style.backgroundColor="#FFFFFF"
+          setTimeout(()=>{
+            button1.style.backgroundColor="#73A5C6"
+          },500)
+        }
+        if (randomNumber==2) {
+          setTimeout(()=>{
+            button2.style.backgroundColor="#73A5C6"
+          },500)
+          button2.style.backgroundColor="#FFFFFF"
+        }
+        if (randomNumber==3) {
+          setTimeout(()=>{
+            button3.style.backgroundColor="#73A5C6"
+          },500)
+          button3.style.backgroundColor="#FFFFFF"
+        }
+        if (randomNumber==4) {
+          setTimeout(()=>{
+            button4.style.backgroundColor="#73A5C6"
+          },500)
+          button4.style.backgroundColor="#FFFFFF"
+        }
+        if (randomNumber==5) {
+          setTimeout(()=>{
+            button5.style.backgroundColor="#73A5C6"
+          },500)
+          button5.style.backgroundColor="#FFFFFF"
+        }
+        if (randomNumber==6) {
+          setTimeout(()=>{
+            button6.style.backgroundColor="#73A5C6"
+          },500)
+          button6.style.backgroundColor="#FFFFFF"
+        }
+        if (randomNumber==7) {
+          setTimeout(()=>{
+            button7.style.backgroundColor="#73A5C6"
+          },500)
+          button7.style.backgroundColor="#FFFFFF"
+        }
+        if (randomNumber==8) {
+          setTimeout(()=>{
+            button8.style.backgroundColor="#73A5C6"
+          },500)
+          button8.style.backgroundColor="#FFFFFF"
+        }
+        if (randomNumber==9) {
+          setTimeout(()=>{
+            button9.style.backgroundColor="#73A5C6"
+          },500)
+          button9.style.backgroundColor="#FFFFFF"
+        }
         console.log(randomNumber);
         console.log(patterns);
       })
