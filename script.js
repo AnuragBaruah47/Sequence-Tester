@@ -12,45 +12,36 @@ const button7=document.getElementById("7")
 const button8=document.getElementById("8")
 const button9=document.getElementById("9")
 let randomNumber;
+console.log(button1);
+
 let patterns = [];
 let game = false;
 //buttons ka logic sath mei main game ka bhi(logic of my buttons with the main game)
 startButton.addEventListener("click", () => {
   start();
   if (game === true) {
-    randomNumber = 1 //(Math.random() * 8 + 1).toFixed(0);
+    randomNumber =(Math.random() * 8 + 1).toFixed(0);
     patterns.push(randomNumber);
-    console.log(randomNumber);
-    if (randomNumber==1){
-      setTimeout(()=>{
-        button1.style.backgroundColor="#73A5C6"
-      },500)
-      button1.style.backgroundColor="#FFFFFF"
+    for (let i = 0; i < patterns.length; i++) {
+      const element = patterns[i];
     }
-    buttons.forEach((buttons) => {
-      buttons.addEventListener("click", () => {
-        if(buttons.id==randomNumber){
-          setTimeout(()=>{
-            body.style.backgroundColor="#000000"
-          },100)
-          body.style.backgroundColor="#008000"
-        }else{
-          setTimeout(()=>{
-            body.style.backgroundColor="#000000"
-          },100)
-          body.style.backgroundColor="#ff0000"
-          stop()
-          }
-        });
-    });
+    buttons.forEach((button)=>{
+      if (randomNumber==1) {
+        button1.style.backgroundColor="#ffffff"
+      }
+      button.addEventListener("click",()=>{
+        randomNumber =(Math.random() * 8 + 1).toFixed(0);
+        patterns.push(randomNumber);
+        console.log(randomNumber);
+        console.log(patterns);
+      })
+    })
 }
 });
-
-// sarei mere function (mur gutei functions bur) (all my functions)
 function start() {
   game = true;
    roundUpdateInfo.innerText="Round 1"
-  startButton.disabled=true
+   startButton.disabled=true
 }
 function stop() {
   patterns = [];
