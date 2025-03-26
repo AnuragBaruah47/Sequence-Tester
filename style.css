@@ -12,8 +12,7 @@ body,button{
     padding: 0px;
 }
 body{
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,0.3169642857142857) 0%, rgba(5,5,5,1) 50%, rgba(1,162,195,0.4458158263305322) 88%, rgba(0,212,255,1) 100%);
+    background-color:#000000;
 }
 .container{
     height: 100vh;
@@ -30,7 +29,7 @@ button{
     border: 3px solid #ffffff;
     background-color: #73A5C6;
 }
-.buttons{
+.buttonsContainer{
     display: grid;
     background-color: #000;
     grid-template-columns: 9.6rem 9.6rem 9.6rem;
@@ -92,7 +91,7 @@ button{
         border: 1.5px solid #ffffff;
         background-color: #73A5C6;
     }
-    .buttons{
+    .buttonsContainer{
         display: grid;
         background-color: #000;
         grid-template-columns: 5.5rem 5.5rem 5.5rem;
