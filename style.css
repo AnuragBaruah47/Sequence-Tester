@@ -52,6 +52,9 @@ button{
     width: 10rem;
     border-radius: 1rem;
 }
+.score{
+    font-size: 3rem;
+}
 .title{
     font-size: 4rem;
 }
@@ -62,6 +65,9 @@ button{
 @media(max-width:530px){
 .title{
     font-size: 3rem;
+}
+.score{
+    font-size: 2rem;
 }
 }
 @media(max-width:478px){
@@ -97,5 +103,8 @@ button{
         grid-template-columns: 5.5rem 5.5rem 5.5rem;
         grid-template-rows: 5.5rem 5.5rem 5.5rem;
         border-radius: 10px;
+    }
+    .score{
+        font-size: 1.5rem;
     }
 }
