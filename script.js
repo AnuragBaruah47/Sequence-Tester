@@ -3,6 +3,8 @@ const body = document.querySelector("body");
 const titlecontainer = document.querySelector(".title");
 const totalScore = document.querySelector(".score");
 const startButton = document.querySelector(".startbutton");
+const clickAudio= new Audio("click.wav")
+const endAudio= new Audio("lost.wav")
 let game = false;
 let round = 0;
 let userInput = [];
@@ -19,6 +21,8 @@ const startFunction = () => {
   pattersArray = [];
   startButton.disabled = true;
   titlecontainer.innerText = `Round ${round}`;
+  clickAudio.play()
+  endAudio.pause()
   colorBlink();
 };
 
@@ -27,18 +31,14 @@ const colorBlink = () => {
   randomNumber = (Math.random() * 8 + 1).toFixed(0);
   pattersArray.push(randomNumber);
   let randomBox = document.getElementById(randomNumber)
-  pattersArray.forEach((num) => {
-    const button = document.getElementById(num);
-    setTimeout(() => {
-      button.style.backgroundColor = " #ffffff"
       setTimeout(() => {
-        button.style.backgroundColor = " #73A5C6"
+        randomBox.style.backgroundColor=` #72a4c5`
       }, 300);
-    },300)
-  randomBox.style.backgroundColor = "rgb(255, 255, 255)"
-})}
+     randomBox.style.backgroundColor=`rgb(255, 255, 255)`
+}
 
 const endFunction = () => {
+  titlecontainer.innerText=`Game Over!`
   totalScore.innerText = `Your Score:${round - 1} `
   startButton.disabled = false;
   game = false;
@@ -50,8 +50,10 @@ allButtons.forEach((button) => {
     let userInputId = button.id;
     userInput.push(userInputId);
     let pattersArrayString = pattersArray.join(" ");
+    clickAudio.play()
     let userInputString = userInput.join(" ");
-    if (userInputString === pattersArrayString) {
+    if (userInputString === pattersArrayString){
+      clickAudio.play()
       setTimeout(() => {
         body.style.backgroundColor = " #000000";
       }, 100);
@@ -62,6 +64,7 @@ allButtons.forEach((button) => {
             colorBlink()
       }, 300);
     } else if (!pattersArrayString.startsWith(userInputString)) {
+      endAudio.play()
       setTimeout(() => {
         body.style.backgroundColor = `rgb(0, 0, 0)`;
       }, 100);
